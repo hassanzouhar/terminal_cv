@@ -1,26 +1,26 @@
 const config = {
   ascii: [
-    "██████╗ ██████╗  ██████╗     ████████╗███████╗██████╗ ███╗   ███╗",
-    "██╔══██╗██╔══██╗██╔═══██╗    ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║",
-    "██████╔╝██████╔╝██║   ██║       ██║   █████╗  ██████╔╝██╔████╔██║",
-    "██╔═══╝ ██╔═══╝ ██║   ██║       ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║",
-    "██║     ██║     ╚██████╔╝       ██║   ███████╗██║  ██║██║ ╚═╝ ██║",
-    "╚═╝     ╚═╝      ╚═════╝        ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝"
+    "████████╗ ███████╗ ██████╗  ███╗   ███╗",
+    "╚══██╔══╝ ██╔════╝ ██╔══██╗ ████╗ ████║",
+    "   ██║    █████╗   ██████╔╝ ██╔████╔██║",
+    "   ██║    ██╔══╝   ██╔══██╗ ██║╚██╔╝██║",
+    "   ██║    ███████╗ ██║  ██║ ██║ ╚═╝ ██║",
+    "   ╚═╝    ╚══════╝ ╚═╝  ╚═╝ ╚═╝     ╚═╝"
   ],
   title: "R2C Terminal",
-  username: "visitor",
-  hostname: "r2c",
-  password: "050823",
-  repoLink: "https://github.com/nasan016/r2c",
+  username: "rebel",
+  hostname: "r2c.world",
+  password: "rebelswithacause",
+  repoLink: "https://github.com/hassanzouhar/terminal_cv",
   social: {
     email: "your@email.com",
     github: "yourgithub",
     linkedin: "you"
   },
-  aboutGreeting: "Hi stranger. Welcome to R2C Terminal.",
+  aboutGreeting: "Hi there. Welcome to the R2C Project Directory.",
   projects: [
-    ["GofeR", "Vue.js reactivity in Go.", "https://github.com/nasan016/gofer"],
-    ["R2C Terminal", "Terminal styled website.", "https://github.com/nasan016/r2c"]
+    ["Lorem ipsum", "Vue.js reactivity in Go.", "https://github.com/hassanzouhar/terminal_cv"],
+    ["R2C Terminal", "Terminal styled website.", "https://github.com/hassanzouhar/terminal_cv"]
   ],
   colors: {
     background: "#1c1c1c",       // Darker background
