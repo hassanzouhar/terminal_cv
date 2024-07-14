@@ -1,8 +1,3 @@
-Here's the updated `README.md` file with the correct repository URL:
-
-### README.md
-
-```markdown
 # R2C Terminal
 
 R2C Terminal is an interactive web-based terminal that serves as a dynamic and stylish resume. It uses modern web technologies to create a terminal-like interface where users can explore your resume, projects, and contact information through various commands.
