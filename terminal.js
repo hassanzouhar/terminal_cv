@@ -76,7 +76,7 @@ function processInput() {
     if (input !== '') {
         HISTORY.push(input);
         historyIndex = HISTORY.length;
-        const output = processCommand(input);
+        const output = window.processCommand(input); // Ensure processCommand is called correctly
         appendToTerminal(output);
     }
     
