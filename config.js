@@ -1,48 +1,47 @@
 const config = {
   ascii: [
-    "████████╗ ███████╗ ██████╗  ███╗   ███╗",
-    "╚══██╔══╝ ██╔════╝ ██╔══██╗ ████╗ ████║",
-    "   ██║    █████╗   ██████╔╝ ██╔████╔██║",
-    "   ██║    ██╔══╝   ██╔══██╗ ██║╚██╔╝██║",
-    "   ██║    ███████╗ ██║  ██║ ██║ ╚═╝ ██║",
-    "   ╚═╝    ╚══════╝ ╚═╝  ╚═╝ ╚═╝     ╚═╝"
+    "██████╗       ████████╗ ███████╗ ██████╗  ███╗   ███╗",
+    "██╔══██╗      ╚══██╔══╝ ██╔════╝ ██╔══██╗ ████╗ ████║",
+    "██████╔╝         ██║    █████╗   ██████╔╝ ██╔████╔██║",
+    "██╔══██╗  ╔██╗   ██║    ██╔══╝   ██╔══██╗ ██║╚██╔╝██║",
+    "██║  ██║         ██║    ███████╗ ██║  ██║ ██║ ╚═╝ ██║",
+    "╚═╝  ╚═╝         ╚═╝    ╚══════╝ ╚═╝  ╚═╝ ╚═╝     ╚═╝"
   ],
-  title: "R2C Terminal",
+  title: "This is R-Term, a retro styled terminal emulator built on HTML/JS/CSS.",
   username: "rebel",
   hostname: "r2c.world",
-  password: "rebelswithacause",
   repoLink: "https://github.com/hassanzouhar/terminal_cv",
   social: {
-    email: "your@email.com",
-    github: "yourgithub",
-    linkedin: "you"
+    email: "hassan.zouhar@proton.me",
+    github: "https://github.com/hassanzouhar",
+    linkedin: "https://linkedin.com/hassanzouhar"
   },
   aboutGreeting: "Hi there. Welcome to the R2C Project Directory.",
   projects: [
-    ["Lorem ipsum", "Vue.js reactivity in Go.", "https://github.com/hassanzouhar/terminal_cv"],
-    ["R2C Terminal", "Terminal styled website.", "https://github.com/hassanzouhar/terminal_cv"]
+    ["Lorem ipsum", "Doomsday Machine Club", "https://github.com/hassanzouhar/terminal_cv"],
+    ["R2C Terminal", "Terminal Directory", "https://github.com/hassanzouhar/terminal_cv"]
   ],
   colors: {
-    background: "#1c1c1c",       // Darker background
-    foreground: "#d4d4d4",       // Light grey text for better readability
-    banner: "#ffcc00",           // Bright yellow for the banner
+    background: "#1c1c1c",
+    foreground: "#d4d4d4",
+    banner: "#ffcc00",
     border: {
       visible: true,
-      color: "#444444"           // Subtle grey border
+      color: "#444444"
     },
     prompt: {
-      default: "#d4d4d4",        // Match the foreground color
-      user: "#00ff00",           // Bright green for the user
-      host: "#00bfff",           // Sky blue for the host
-      input: "#ff69b4"           // Pink for the input
+      default: "#d4d4d4",
+      user: "#00ff00",
+      host: "#00bfff",
+      input: "#ff69b4"
     },
     link: {
-      text: "#00bfff",           // Sky blue for links
-      highlightColor: "#ff69b4", // Pink for link highlight background
-      highlightText: "#1c1c1c"   // Match background for contrast
+      text: "#00bfff",
+      highlightColor: "#ff69b4",
+      highlightText: "#1c1c1c"
     },
     commands: {
-      textColor: "#ffcc00"       // Bright yellow for commands text
+      textColor: "#ffcc00"
     }
   }
 };

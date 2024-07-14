@@ -10,15 +10,6 @@
   --border-color: #444444;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
 html, body {
   height: 100%;
   font-size: 16px;
@@ -63,23 +54,6 @@ body {
 
 #terminal-output::-webkit-scrollbar {
   display: none;
-}
-
-#terminal-output p, #terminal-output div {
-  margin: 0 0 10px 0;
-}
-
-#terminal-output p {
-  animation: typing 0.5s steps(30, end);
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-pre {
-  margin: 0;
-  padding: 0;
-  line-height: 20px !important;
-  font-family: "IBM Plex Mono", monospace;
 }
 
 #input-line {
