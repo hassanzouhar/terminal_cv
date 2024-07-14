@@ -1,3 +1,90 @@
+const terminalOutput = document.getElementById('terminal-output');
+const terminalInput = document.getElementById('terminal-input');
+const prompt = document.getElementById('prompt');
+
+let historyIndex = 0;
+let tempInput = "";
+const HISTORY = [];
+
+// Apply colors from config
+applyColors(config.colors);
+
+function applyColors(colors) {
+    document.body.style.backgroundColor = colors.background;
+    document.body.style.color = colors.foreground;
+    terminalInput.style.color = colors.prompt.input;
+
+    if (colors.border.visible) {
+        document.getElementById('terminal').style.border = `2px solid ${colors.border.color}`;
+    }
+
+    document.getElementById('user').textContent = config.username;
+    document.getElementById('user').style.color = colors.prompt.user;
+    document.getElementById('host').textContent = config.hostname;
+    document.getElementById('host').style.color = colors.prompt.host;
+}
+
+// Initialize the terminal
+function initTerminal() {
+    displayBanner();
+    terminalInput.addEventListener('keydown', handleInput);
+    window.addEventListener('click', () => terminalInput.focus());
+}
+
+// Display welcome banner
+function displayBanner() {
+    const banner = `
+<pre style="color: ${config.colors.banner}">
+${config.ascii.join('\n')}
+</pre>
+<p>${config.title}</p>
+<div>Type <span class="command highlight">'help'</span> to see available commands.</div>
+`;
+    appendToTerminal(banner);
+}
+
+// Handle user input
+function handleInput(e) {
+    switch(e.key) {
+        case 'Enter':
+            e.preventDefault();
+            processInput();
+            break;
+        case 'ArrowUp':
+            e.preventDefault();
+            navigateHistory('up');
+            break;
+        case 'ArrowDown':
+            e.preventDefault();
+            navigateHistory('down');
+            break;
+        case 'Tab':
+            e.preventDefault();
+            autocomplete();
+            break;
+    }
+}
+
+// Process the entered input
+function processInput() {
+    const input = terminalInput.value.trim();
+    const commandLineDiv = document.createElement('div');
+    commandLineDiv.className = 'command-line';
+    commandLineDiv.innerHTML = `<span class="prompt">${prompt.innerHTML}</span> <span class="command" style="color: ${config.colors.commands.textColor}">${input}</span>`;
+    terminalOutput.appendChild(commandLineDiv);
+    
+    if (input !== '') {
+        HISTORY.push(input);
+        historyIndex = HISTORY.length;
+        const output = window.processCommand(input); // Ensure processCommand is called correctly
+        appendToTerminal(output);
+    }
+    
+    terminalInput.value = '';
+    scrollToBottom();
+}
+
+// Commands
 const commands = {
     help: () => `
 <span class="heading">Available commands:</span>
@@ -12,7 +99,7 @@ const commands = {
 `,
 
     clear: () => {
-        window.terminalUtils.clearTerminal();
+        clearTerminal();
         return '';
     },
 
@@ -31,7 +118,7 @@ ${cvData.skills.map(skill => `<span class="detail">• ${skill}</span>`).join('\
     experience: () => `
 <span class="heading">Work Experience:</span>
 ${cvData.experience.map(job => `
-${window.terminalUtils.createExpandableSection(
+${createExpandableSection(
     `${job.position} at ${job.company}`,
     `<span class="subheading">Duration:</span> <span class="detail">${job.duration}</span>
 <span class="subheading">Responsibilities:</span>
@@ -52,7 +139,7 @@ ${cvData.education.map(edu => `
     projects: () => `
 <span class="heading">Notable Projects:</span>
 ${cvData.projects.map(project => `
-${window.terminalUtils.createExpandableSection(
+${createExpandableSection(
     project.name,
     `<span class="subheading">Description:</span> <span class="detail">${project.description}</span>
 <span class="subheading">Technologies:</span> <span class="detail">${project.technologies.join(', ')}</span>`
@@ -88,3 +175,23 @@ function processCommand(input) {
 
 // Make processCommand available globally
 window.processCommand = processCommand;
+
+// Utility functions
+function appendToTerminal(text) {
+    const output = document.createElement('div');
+    output.innerHTML = text;
+    output.style.whiteSpace = 'pre-wrap';
+    terminalOutput.appendChild(output);
+}
+
+function clearTerminal() {
+    terminalOutput.innerHTML = '';
+    displayBanner();
+}
+
+function scrollToBottom() {
+    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+}
+
+// Initialize the terminal when the page loads
+window.addEventListener('load', initTerminal);
