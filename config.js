@@ -23,26 +23,26 @@ const config = {
     ["R2C Terminal", "Terminal styled website.", "https://github.com/nasan016/r2c"]
   ],
   colors: {
-    background: "#0C0623",
-    foreground: "#F8DDE5",
-    banner: "#FF9951",
+    background: "#1c1c1c",       // Darker background
+    foreground: "#d4d4d4",       // Light grey text for better readability
+    banner: "#ffcc00",           // Bright yellow for the banner
     border: {
       visible: true,
-      color: "#FFADE2"
+      color: "#444444"           // Subtle grey border
     },
     prompt: {
-      default: "#A5A7A7",
-      user: "#FE6BC9",
-      host: "#70FDFF",
-      input: "#FF7685"
+      default: "#d4d4d4",        // Match the foreground color
+      user: "#00ff00",           // Bright green for the user
+      host: "#00bfff",           // Sky blue for the host
+      input: "#ff69b4"           // Pink for the input
     },
     link: {
-      text: "#B6AAEE",
-      highlightColor: "#FFADE2",
-      highlightText: "#0C0623"
+      text: "#00bfff",           // Sky blue for links
+      highlightColor: "#ff69b4", // Pink for link highlight background
+      highlightText: "#1c1c1c"   // Match background for contrast
     },
     commands: {
-      textColor: "#FD9BDB"
+      textColor: "#ffcc00"       // Bright yellow for commands text
     }
   }
 };

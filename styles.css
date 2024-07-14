@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;600&family=Pixelify+Sans&family=VT323&display=swap');
 
 :root {
-  --background: #1e1e1e;
-  --foreground: #c5c8c6;
-  --prompt: #00cc00;
-  --input: #00cc00;
-  --link: #61dafb;
-  --highlight: #ff8c00;
-  --border-color: #3f3f3f;
+  --background: #1c1c1c;
+  --foreground: #d4d4d4;
+  --prompt: #00ff00;
+  --input: #ff69b4;
+  --link: #00bfff;
+  --highlight: #ffcc00;
+  --border-color: #444444;
 }
 
 @keyframes typing {
