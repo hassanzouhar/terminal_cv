@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terminal CV - An interactive resume in terminal style">
+    <title>Terminal CV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;600&family=Pixelify+Sans&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="terminal">
+        <div id="terminal-output"></div>
+        <div id="input-line">
+            <span id="prompt">
+                <span id="user"></span>
+                <span id="at">@</span>
+                <span id="host"></span>
+                <span id="colon">:</span>
+                <span id="path">~</span>
+                <span id="dollar">$</span>
+            </span>
+            <input type="text" id="terminal-input" autofocus>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="terminal.js"></script>
+</body>
+</html>
